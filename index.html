@@ -37,13 +37,13 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 48px;
+      padding: 10px 48px;
       background: rgba(13,13,13,0.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .nav-logo { display: flex; align-items: center; gap: 12px; }
-    .nav-logo img { height: 56px; filter: brightness(1.1); }
+    .nav-logo img { height: 110px; filter: brightness(1.1); }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
       color: rgba(245,244,240,0.7); text-decoration: none;
@@ -626,32 +626,9 @@
 <!-- CONTACTO -->
 <section id="contacto">
   <div class="section-tag">Contacto</div>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <h2 class="section-title">¿Tenés dudas?<br>Escribinos.</h2>
-      <p>Estamos disponibles para asesorarte antes, durante y después del trámite. Respondemos rápido y sin vueltas.</p>
-      <div class="contact-item">
-        <div class="contact-icon">📱</div>
-        <div class="contact-item-text">
-          <strong>WhatsApp</strong>
-          <span>+54 9 11 3778-7305</span>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">✉️</div>
-        <div class="contact-item-text">
-          <strong>Email</strong>
-          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb829d8a858f8286828e9984ab8c868a8287c5888486">[email&#160;protected]</a></span>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">📍</div>
-        <div class="contact-item-text">
-          <strong>Área de cobertura</strong>
-          <span>Ciudad Autónoma de Buenos Aires</span>
-        </div>
-      </div>
-    </div>
+  <div style="max-width:680px; margin: 0 auto;">
+    <h2 class="section-title">¿Tenés dudas?<br>Escribinos.</h2>
+    <p style="color:rgba(245,244,240,0.55); font-size:15px; line-height:1.8; margin-bottom:32px;">Estamos disponibles para asesorarte antes, durante y después del trámite. Respondemos rápido y sin vueltas.</p>
     <div class="contact-form">
       <div class="form-section-title">Envianos un mensaje</div>
       <label>Nombre</label>
@@ -924,11 +901,13 @@
       document.getElementById('c-email').value = '';
       document.getElementById('c-msg').value = '';
     } catch (err) {
+      const detalle = err?.text || err?.message || JSON.stringify(err);
+      console.error('EmailJS error completo:', err);
       statusEl.style.display = 'block';
       statusEl.style.background = 'rgba(255,80,80,0.08)';
       statusEl.style.border = '1px solid rgba(255,80,80,0.3)';
       statusEl.style.color = 'rgba(255,150,150,0.9)';
-      statusEl.textContent = '✗ Hubo un error al enviar. Por favor escribinos directamente por WhatsApp.';
+      statusEl.textContent = `✗ Error: ${detalle}`;
     } finally {
       btnEl.textContent = 'Enviar consulta →';
       btnEl.disabled = false;
