@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Trámites | Aviso de Obra CABA</title>
+    <meta name="description" content="Artículos de interés sobre avisos de obra, trámites en GCBA, y consejos para refacciones legales en CABA. Gestión del proceso del trámite.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(to bottom, var(--slate-100), var(--background));
+            text-align: center;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--slate-100);
+            transition: var(--transition);
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            background: var(--slate-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .blog-content {
+            padding: 24px;
+        }
+        .blog-meta {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .blog-title {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .blog-excerpt {
+            font-size: 0.95rem;
+            color: var(--slate-600);
+            margin-bottom: 20px;
+        }
+        .read-more {
+            font-weight: 600;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .read-more:hover {
+            color: var(--primary);
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="https://raw.githubusercontent.com/ley257/aviso-de-obra/main/ChatGPT%20Image%2031%20mar%202026%2C%2019_07_51.png" alt="Aviso de Obra CABA">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#proceso" class="nav-link">Proceso</a></li>
+                <li><a href="index.html#presupuesto" class="nav-link">Presupuesto</a></li>
+                <li><a href="blog.html" class="nav-link" style="color: var(--primary);">Blog</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="index.html#presupuesto" class="nav-cta">Cotizar Ahora</a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                <span class="section-tag">Guía del Trámite</span>
+                <h1 class="hero-title">Centro de Conocimiento</h1>
+                <p class="hero-desc" style="margin: 0 auto 40px;">Descubrí todo lo que necesitás saber para realizar tus refacciones bajo normativa vigente en la Ciudad de Buenos Aires.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="blog-grid">
+                    <!-- Placeholder Card 1 -->
+                    <article class="blog-card reveal">
+                        <div class="blog-img">🏗️</div>
+                        <div class="blog-content">
+                            <span class="blog-meta">Normativa</span>
+                            <h3 class="blog-title">¿Qué obras requieren un Aviso de Obra en CABA?</h3>
+                            <p class="blog-excerpt">No todas las refacciones necesitan el mismo permiso. Te explicamos la diferencia entre aviso, permiso menor y permiso de obra.</p>
+                            <a href="#" class="read-more">Leer artículo completo →</a>
+                        </div>
+                    </article>
+
+                    <!-- Placeholder Card 2 -->
+                    <article class="blog-card reveal" style="transition-delay: 0.1s">
+                        <div class="blog-img">📋</div>
+                        <div class="blog-content">
+                            <span class="blog-meta">Trámites</span>
+                            <h3 class="blog-title">La importancia del Informe de Dominio RPI</h3>
+                            <p class="blog-excerpt">Conocé por qué el GCBA exige este documento y cómo puede evitarte problemas legales con tu propiedad.</p>
+                            <a href="#" class="read-more">Leer artículo completo →</a>
+                        </div>
+                    </article>
+
+                    <!-- Placeholder Card 3 -->
+                    <article class="blog-card reveal" style="transition-delay: 0.2s">
+                        <div class="blog-img">💡</div>
+                        <div class="blog-content">
+                            <span class="blog-meta">Consejos</span>
+                            <h3 class="blog-title">Cómo acelerar tu trámite de refacción</h3>
+                            <p class="blog-excerpt">Manual de buenas prácticas y documentación necesaria para que tu aviso de obra salga en menos de 48hs.</p>
+                            <a href="#" class="read-more">Leer artículo completo →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="margin-top: 80px; text-align: center;" class="reveal">
+                    <div style="background: white; padding: 48px; border-radius: 24px; box-shadow: var(--shadow-lg); max-width: 800px; margin: 0 auto;">
+                        <h3>¿Buscás un tema específico?</h3>
+                        <p style="margin-bottom: 32px; color: var(--slate-600);">Estamos preparando nuevos artículos generados con inteligencia artificial para cubrir todas tus dudas sobre construcción y normativa.</p>
+                        <a href="index.html#contacto" class="btn-primary">Sugerir un tema</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="padding: 60px 0; border-top: 1px solid var(--slate-200); background-color: var(--slate-50);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+            <div class="nav-logo">
+                <img src="https://raw.githubusercontent.com/ley257/aviso-de-obra/main/ChatGPT%20Image%2031%20mar%202026%2C%2019_07_51.png" alt="Aviso de Obra CABA" style="height: 40px; opacity: 0.8;">
+            </div>
+            <p style="color: var(--slate-500); font-size: 0.9rem;">© 2026 Aviso de Obra CABA. Trámites rápidos y legales.</p>
+            <div style="display: flex; gap: 24px;">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="index.html#contacto" class="nav-link">Soporte</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/5491137787305?text=Hola!%20Vengo%20de%20la%20web%20y%20quería%20consultar%20por%20un%20aviso%20de%20obra." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
